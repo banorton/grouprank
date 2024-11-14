@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-const API_URL = 'https://localhost:5166/api/poll';
+const API_URL = '/api/poll';
+
 
 export const createPoll = async (pollData) => {
     try {
-        const response = await axios.post(API_URL, pollData);
+        const response = await axios.post(`${API_URL}`, pollData);
         return response.data; // This should return the generated poll link and poll ID
     } catch (error) {
         throw error.response ? error.response.data : error.message;
