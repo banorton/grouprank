@@ -14,7 +14,6 @@ public class PollController : ControllerBase
         _context = context;
     }
 
-    // Handle preflight CORS requests
     [HttpOptions]
     public IActionResult Preflight()
     {
@@ -149,7 +148,6 @@ public class PollController : ControllerBase
             return BadRequest("Poll is not yet finished.");
         }
 
-        // Calculate average rank for each option
         var optionsWithAverageRank = poll.Options.Select(o => new OptionResultDto
                 {
                 Id = o.Id,

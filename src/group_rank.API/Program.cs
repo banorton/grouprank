@@ -4,10 +4,9 @@ using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure logging
-builder.Logging.ClearProviders(); // Clear default logging providers
-builder.Logging.AddConsole(); // Add console logging
-builder.Logging.AddDebug(); // Optional: Add debug logging
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole(); // console logging
+builder.Logging.AddDebug(); // debug logging
 
 // Configure CORS based on environment
 if (builder.Environment.IsProduction())
@@ -55,11 +54,9 @@ builder.Services.AddDbContext<PollContext>(options =>
     )
 );
 
-// Add Swagger for API documentation
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Now build the application
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
@@ -70,13 +67,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Enable HTTPS redirection
 app.UseHttpsRedirection();
-
-// Apply CORS before routing
 app.UseCors();
 
-// Add Middleware to Log Requests
 app.Use(async (context, next) =>
 {
     var logger = context.RequestServices.GetRequiredService<ILogger<Program>>();
@@ -84,12 +77,7 @@ app.Use(async (context, next) =>
     await next();
 });
 
-// Use routing for controllers
 app.UseRouting();
-
-// Map controllers
 app.MapControllers();
-
-// Run the application
 app.Run();
 
