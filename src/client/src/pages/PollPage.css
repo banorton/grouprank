@@ -1,0 +1,209 @@
+/* Main Container */
+.poll-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #2F2F2F;
+    color: #FFFFFF;
+}
+
+/* Main Content */
+.poll-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.poll-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.poll-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+/* Instructions */
+.poll-instructions {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* Draggable Options Container */
+.options-container {
+    border: 2px dashed #4A90E2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Poll Option */
+.poll-option {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #1E90FF;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    cursor: move;
+    opacity: 1;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.poll-option.dragging {
+    background-color: #4A90E2;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.end-poll-button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #D0021B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Copy Link Button */
+.copy-link-button {
+    padding: 10px;
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    border: 1px solid #4A90E2;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.copy-link-button:hover {
+    background-color: #357ABD;
+}
+
+.copy-link-button:active {
+    transform: scale(0.98);
+}
+
+.copy-link-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FFFFFF;
+}
+
+/* Hover and Active States for Buttons */
+.button:hover {
+    background-color: #357ABD;
+}
+
+.end-poll-button:hover {
+    background-color: #A80000;
+}
+
+.button:active,
+.end-poll-button:active {
+    transform: scale(0.98);
+}
+
+.button:focus,
+.end-poll-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FFFFFF;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: #3F3F3F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.share-link-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.share-link-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    border-right: none;
+    box-sizing: border-box;
+}
+
+/* Final Rankings */
+.final-rankings {
+    margin-top: 20px;
+}
+
+.final-rankings h2 {
+    margin-bottom: 20px;
+}
+
+.final-rankings table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.final-rankings th,
+.final-rankings td {
+    border-bottom: 1px solid #FFFFFF;
+    padding: 10px;
+    text-align: left;
+}
+
+.final-rankings th {
+    border-bottom: 2px solid #FFFFFF;
+}
+
+/* Submitted Message */
+.submitted-message {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .poll-page {
+        flex-direction: column;
+    }
+}

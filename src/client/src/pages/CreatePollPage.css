@@ -1,0 +1,118 @@
+/* Main Container */
+.create-poll-page {
+    min-height: 100vh;
+    background-color: #2F2F2F;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #3F3F3F;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Title */
+.create-poll-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.option-input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4A90E2;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.create-poll-button {
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Hover and Active States for Buttons */
+.button:hover {
+    background-color: #357ABD;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+/* Focus State for Accessibility */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FFFFFF;
+}
+
+/* Input Focus Styles */
+.input-field:focus,
+.option-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #4A90E2;
+}
+
+/* Error Message */
+.error-message {
+    color: #ff4d4d;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Option Input Container */
+.option-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Remove Option Button */
+.remove-option-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #d9534f;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.remove-option-button:hover {
+    background-color: #c9302c;
+}
+
+.remove-option-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #FFFFFF;
+}

@@ -1,0 +1,86 @@
+setting*
+
+# macOS
+.DS_Store
+
+# Thumbnails
+._*
+
+# Mac system files
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+.fseventsd
+
+# .NET build and log files
+bin/
+obj/
+**/bin/
+**/obj/
+*.user
+*.rsuser
+*.suo
+*.swp
+*.dbmdl
+*.log
+*.pdb
+*.vspscc
+.vscode/
+.vs/
+
+# Visual Studio Code settings
+.vscode/*
+
+# Rider IDE settings
+.idea/
+*.sln.iml
+
+# ASP.NET scaffolding artifacts
+ScaffoldingReadMe.txt
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored if not using NuGet
+# Uncomment if using .NET Core or .NET Standard
+# **/packages/
+packages/
+
+# NPM/Node modules (for React)
+node_modules/
+
+# React build files
+/build
+/dist
+/out
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Coverage directory used by testing tools
+coverage/
+
+# JetBrains Rider project files
+.idea/
+
+# Temporary files created by JetBrains IDEs
+*.iws
+.idea/
+
+# Recycle bin files
+$RECYCLE.BIN/
+
+# VS Code extensions
+.vscode/
